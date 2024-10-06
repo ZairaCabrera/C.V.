@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curriculum Zaira Cabrera</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <ul class="menu">
+                <li><a href="#sobre-mi">Sobre mí</a></li>
+                <li><a href="#competencias">Competencias profesionales</a></li>
+                <li><a href="#contacto">Datos de contacto</a></li>
+                <li><a href="#experiencia">Mi experiencia</a></li>
+                <li><a href="#proyectos">Mis proyectos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="logo">
+        <img src="img/foto_cv.jpg" alt="mi foto">
+    </section>
+
+    <main>
+        <section class="sobremi" id="sobre-mi">
+            <h1>Sobre mí</h1>
+            <p>Soy desarrolladora web en formación, con conocimientos en tecnologías front-end y back-end. Poseo
+                experiencia previa en nutrición y atención al cliente, lo que me ha permitido desarrollar habilidades
+                como la capacidad de adaptación, organización y trabajo en equipo.
+                Mi objetivo es aplicar estas competencias en proyectos innovadores en Mercadona, contribuyendo al
+                crecimiento de sus plataformas digitales y mejorando la experiencia de usuario</p>
+        </section>
+
+        <section id="contacto">
+            <h2>Datos de contacto</h2>
+            <p><strong>Teléfono:</strong> +34 670 60 87 66</p>
+            <p><strong>Email:</strong> zairac.br@gmail.com</p>
+            <button class="linkedin"><a href="https://www.linkedin.com/in/zairacabrerabarrado/">Visita mi
+                    Linkedin</a></button>
+        </section>
+
+        <section id="formacion">
+            <h2>Datos Académicos</h2>
+            <p>CFGS Desarrollo de Aplicaciones Web - <strong>IES ABASTOS</strong></p>
+            <p>Graduada en Nutrición Humana - <strong>UV</strong></p>
+            <p>Master en Capacitación - <strong>UCV</strong></p>
+            <p>CFGM Técnico de Farmacia - <strong>IES Tirant Lo Blanc</strong></p>
+        </section>
+
+        <section id="experiencia">
+            <h2>Experiencia Profesional</h2>
+            <div class="carousel">
+                <button class="carousel-button prev" onclick="previousSlide()">❮</button>
+                <div class="carousel-item active">
+                    <strong class="titulo">Técnico en Farmacia y responsable del servicio de nutrición</strong><em> (2021 -
+                        Actualidad)</em>
+                    <ul>
+                        <li>Consejo farmacéutico y dispensación de medicamentos.</li>
+                        <li>Consejo farmacéutico y dispensación.</li>
+                        <li>Responsable del servicio de nutrición.</li>
+                        <li>Conocimientos en fitoterapia y nutracéuticos.</li>
+                        <li>Manejo de recepción, facturación, control de stocks, entre otras funciones.</li>
+                        <li>Elaboración del Sistema Personalizado de Medicación (SPD).</li>
+                    </ul>
+                </div>
+                <div class="carousel-item">
+                    <strong class="titulo">Tu Salud Natural S.L.</strong><em> (2019 - 2021)</em>
+                    <ul>
+                        <li>Asesoramiento individualizado en fitoterapia</li>
+                        <li>Asesoramiento en cosmética vegana y vegetariana.</li>
+                        <li>Recepción, colocación y control de mercancía..</li>
+                    </ul>
+                </div>
+                <div class="carousel-item">
+                    <strong class="titulo">Herbolario Navarro</strong><em> (2017 - 2019)</em>
+                    <ul>
+                        <li>Asesoramiento personalizado de productos fitoterapéuticos y cosmética bio.</li>
+                        <li>Consejo dietético y asesoramiento nutricional</li>
+                        <li>Experiencia en venta cruzada.</li>
+                        <li>Gestión de facturas</li>
+                        <li>Manejo de recepción, control de stocks y mantenimiento.</li>
+                    </ul>
+                </div>
+                <button class="carousel-button next" onclick="nextSlide()">❯</button>
+            </div>
+        </section>
+
+        <section id="competencias">
+            <h2>Mis Competencias</h2>
+            <canvas id="competenciasChart" width="400" height="400"></canvas>
+        </section>
+
+        <section id="proyectos">
+            <h2>Proyectos</h2>
+            <div class="proyectos-carousel">
+                <button class="carousel-button prev" onclick="previousProject()">❮</button>
+                <div class="proyecto-item active">
+                    <img src="img/captura_web_arquitectura1.jpg" alt="Mockup del proyecto">
+                    <h3>Web de arquitectura</h3>
+                    <p>Un diseño web elegante y sofisticado, creado para reflejar el profesionalismo y la experiencia de larga trayectoria en el sector de la arquitectura. 
+                        Esta página transmite seriedad y calidad, adaptándose a las necesidades de clientes que buscan un enfoque sólido y confiable.
+                    </p>
+                    <a href="https://github.com/ZairaCabrera/WebArquitectura" target="_blank" class="github-button">Ver proyecto en Gibhub</a>
+                </div>
+                <div class="proyecto-item">
+                    <img src="img/captura_gafas_virtuales.jpg" alt="Mockup del proyecto">
+                    <h3>Web de Presentación de Gafas 3D</h3>
+                    <p>Un diseño futurista y elegante, pensado para transmitir exclusividad y profesionalismo. 
+                        La interfaz destaca el producto con una estética moderna y limpia, ofreciendo una experiencia visual impactante y de alta calidad.
+                    </p>
+                    <a href="https://github.com/ZairaCabrera/WebPresentacionGafas3D" target="_blank" class="github-button">Ver proyecto en GitHub</a>
+                </div>
+                <button class="carousel-button next" onclick="nextProject()">❯</button>
+            </div>
+        </section>
+
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const ctx = document.getElementById('competenciasChart').getContext('2d');
+            new Chart(ctx, {
+                type: 'radar',
+                data: {
+                    labels: ['Responsable', 'Organizada', 'Capacidad de adaptación', 'Compromiso'],
+                    datasets: [{
+                        label: 'Nivel de Competencia',
+                        data: [9, 8, 10, 9], // Los niveles pueden ir de 1 a 10, ajusta según tu autovaloración
+                        backgroundColor: 'rgba(0, 171, 97, 0.2)',
+                        borderColor: 'rgba(0, 171, 97, 1)',
+                        borderWidth: 2,
+                        pointBackgroundColor: 'rgba(0, 171, 97, 1)',
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    scales: {
+                        r: {
+                            beginAtZero: true,
+                            suggestedMax: 10,
+                        }
+                    }
+                }
+            });
+        });
+        </script>
+    <footer>
+        © 2024 Zaira Cabrera Barrado
+    </footer>
+
+</body>
+
+</html>

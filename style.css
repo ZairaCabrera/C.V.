@@ -1,0 +1,301 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    margin-bottom: 10%;
+}
+p{
+    color: #333;
+}
+header {
+    background-color: #00ab61;
+    color: white;
+    padding: 30px 0;
+    text-align: center;
+}
+
+.logo img {
+    height: 180px;
+    float: left;
+    padding-left: 5%;
+    padding-top: 8%;
+}
+
+
+nav {
+    background-color: #00ab61;
+    
+}
+
+ul.menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+ul.menu li {
+    position: relative;
+    padding: 0 20px;
+    font-size: 20px;
+}
+ul {
+    list-style: none; 
+}
+ul.menu li a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+ul.submenu {
+    display: none;
+    position: absolute;
+    background-color: #00ab61;
+    list-style: none;
+    padding: 10px;
+    top: 100%;
+}
+
+ul.menu li:hover .submenu {
+    display: block;
+}
+
+ul.submenu li {
+    padding: 5px 0;
+}
+
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+.linkedin a{
+    text-decoration: none;
+    color: #005e3e;
+}
+
+h1, h2 {
+    font-size: 3em;
+    color: #005e3e;
+}
+
+.sobremi{
+    margin-top: 8%;
+}
+.sobremi h1{
+    margin-bottom: 0%;
+    margin-right: 23%;
+}
+.sobremi p{
+    text-align: justify !important;
+    padding: 3%;
+    margin-top: 0%;
+    font-size: 1.5em;
+}
+
+.sobremi p::first-letter{
+    font-size: 2em;
+}
+
+#contacto{
+    position: absolute;
+    left: 0%;
+    height: 33%;
+    width: 50%;
+}
+#contacto h2{
+    width: 80%;
+    padding-left: 10%;
+}
+#formacion{
+    position: absolute;
+    right: 0%;
+    height: 33%;
+    width: 50%;
+}
+#formacion h2{
+    font-size: 3em;
+}
+
+
+#experiencia {
+    background-color: #005e3e;
+    padding: 3%;
+    color: #f4f4f4;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    margin-top: 30%;
+    
+}
+
+.titulo{
+    font-size: 1.5em;
+    text-align: center;
+}
+
+div ul{
+    margin-right: 5.5%;
+    font-size: 1.2em;
+}
+
+.carousel {
+    display: flex;
+    align-items: center;
+    position: relative;
+    height: auto;
+}
+
+.carousel-item {
+    display: none;
+    flex: 1;
+    transition: opacity 0.5s ease-in-out;
+    padding: 20px; 
+    min-height: 200px;
+}
+
+.carousel-item.active {
+    display: block;
+}
+
+.carousel-button {
+    background-color: transparent;
+    border: none;
+    color: #f4f4f4;
+    font-size: 2em;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.carousel-button.prev {
+    left: 10px;
+}
+
+.carousel-button.next {
+    right: 10px;
+}
+#experiencia h2{
+    margin-top: 0%;
+}
+
+#experiencia h2{
+    margin-top: 0%;
+}
+
+#experiencia > h2,#experiencia div, #experiencia > p , #experiencia > ul{
+    color: #f4f4f4;
+}
+
+#proyectos {
+    text-align: center;
+    padding: 3%;
+    background-color: #005e3e;
+}
+#proyectos h2{
+    margin-bottom: 0%;
+    margin-top: 0%;
+}
+
+#proyectos h2, #proyectos div div p, #proyectos div div h3{
+    color: #f4f4f4;
+}
+
+#proyectos div div p{
+    text-align: justify;
+}
+
+.proyectos-carousel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 80%; 
+    margin: 0 auto; 
+}
+
+.proyecto-item {
+    display: none;
+    flex: 1;
+    transition: opacity 0.5s ease-in-out;
+    padding: 20px;
+    max-width: 400px;
+    max-width: 600px; 
+    width: 100%; 
+}
+
+.proyecto-item h3{
+    font-size: 2em;
+    margin: 0%;
+    padding: 0%;
+}
+
+.proyecto-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    width: 100%; 
+}
+
+.github-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #00ab61;
+    background-color: white;
+    border: 2px solid #00ab61;
+    border-radius: 8px; 
+    text-decoration: none; 
+    transition: all 0.3s ease;
+}
+
+.github-button:hover {
+    background-color: #00ab61;
+    color: white;
+    border-color: #008e4f;
+}
+
+.proyecto-item.active {
+    display: block;
+}
+
+.carousel-button {
+    background-color: transparent;
+    border: none;
+    color: #333;
+    font-size: 2em;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+}
+
+.carousel-button.prev {
+    left: 10px;
+}
+
+.carousel-button.next {
+    right: 10px;
+}
+
+.carousel-button {
+    color: #f4f4f4;
+}
+
+
+footer {
+    background-color: #00ab61;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
