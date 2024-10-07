@@ -1,258 +1,191 @@
+
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
+    color: #333;
     margin: 0;
     padding: 0;
-    color: #333;
-    margin-bottom: 10%;
 }
-p{
-    color: #333;
-}
+
+/* Header */
 header {
     background-color: #00ab61;
-    color: white;
-    padding: 30px 0;
-    text-align: center;
+    padding: 20px 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
 }
 
-.logo img {
-    height: 180px;
-    float: left;
-    padding-left: 5%;
-    padding-top: 8%;
+header .nav-link {
+    color: white !important;
+    font-size: 1.1rem;
+    transition: color 0.3s;
 }
 
-
-nav {
-    background-color: #00ab61;
-    
+header .nav-link:hover {
+    color: #e0e0e0 !important;
 }
 
-ul.menu {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-}
-
-ul.menu li {
-    position: relative;
-    padding: 0 20px;
-    font-size: 20px;
-}
-ul {
-    list-style: none; 
-}
-ul.menu li a {
-    color: white;
-    text-decoration: none;
-    font-size: 20px;
-}
-
-ul.submenu {
-    display: none;
-    position: absolute;
-    background-color: #00ab61;
-    list-style: none;
-    padding: 10px;
-    top: 100%;
-}
-
-ul.menu li:hover .submenu {
-    display: block;
-}
-
-ul.submenu li {
-    padding: 5px 0;
-}
-
+/* Main ajustado a moviles y tablets */
 main {
-    padding: 20px;
-    text-align: center;
+    padding-top: 0%; 
 }
 
-.linkedin a{
-    text-decoration: none;
-    color: #005e3e;
+@media (max-width: 768px) {
+    main {
+        padding-top: 2%;
+    }
 }
 
+@media (max-width: 1000px) {
+    main {
+        padding-top: 2%;
+    }
+}
+
+/* Logo */
+.logo img {
+    height: 150px;
+    width: auto;
+    float: left;
+    padding-left: 30px;
+    border-radius: 50%;
+}
+
+/* ajustes de secciones*/
 h1, h2 {
-    font-size: 3em;
     color: #005e3e;
+    margin-bottom: 20px;
 }
 
-.sobremi{
-    margin-top: 8%;
-}
-.sobremi h1{
-    margin-bottom: 0%;
-    margin-right: 23%;
-}
-.sobremi p{
-    text-align: justify !important;
-    padding: 3%;
-    margin-top: 0%;
-    font-size: 1.5em;
+@media (min-width: 769px) {
+    h1, h2 {
+        text-align: center;
+    }
+
+    #experienciaCarousel .carousel-control-prev,
+    #experienciaCarousel .carousel-control-next,
+    #proyectosCarousel .carousel-control-prev,
+    #proyectosCarousel .carousel-control-next {
+        width: 5%;
+    }
+
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+        background-color: #00ab61;
+        border-radius: 50%;
+        padding: 10px;
+    }
 }
 
-.sobremi p::first-letter{
-    font-size: 2em;
+#sobre-mi p, #contacto p, #formacion ul, #proyectos p {
+    text-align: justify;
+    font-size: 1rem;
 }
 
-#contacto{
-    position: absolute;
-    left: 0%;
-    height: 33%;
-    width: 50%;
-}
-#contacto h2{
-    width: 80%;
-    padding-left: 10%;
-}
-#formacion{
-    position: absolute;
-    right: 0%;
-    height: 33%;
-    width: 50%;
-}
-#formacion h2{
-    font-size: 3em;
-}
-
-
-#experiencia {
-    background-color: #005e3e;
-    padding: 3%;
-    color: #f4f4f4;
-    position: relative;
-    overflow: hidden;
-    text-align: center;
-    margin-top: 30%;
-    
-}
-
-.titulo{
-    font-size: 1.5em;
+#contacto div p{
     text-align: center;
 }
 
-div ul{
-    margin-right: 5.5%;
-    font-size: 1.2em;
-}
-
-.carousel {
-    display: flex;
-    align-items: center;
-    position: relative;
-    height: auto;
-}
-
-.carousel-item {
-    display: none;
-    flex: 1;
-    transition: opacity 0.5s ease-in-out;
-    padding: 20px; 
-    min-height: 200px;
-}
-
-.carousel-item.active {
-    display: block;
-}
-
-.carousel-button {
-    background-color: transparent;
-    border: none;
-    color: #f4f4f4;
-    font-size: 2em;
-    cursor: pointer;
+/* ajustes de carrusel */
+#experienciaCarousel .carousel-control-prev,
+#experienciaCarousel .carousel-control-next {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
+    width: 5%;
+    z-index: 1000;
 }
 
-.carousel-button.prev {
-    left: 10px;
+#experienciaCarousel .carousel-control-prev {
+    left: 0;
 }
 
-.carousel-button.next {
-    right: 10px;
-}
-#experiencia h2{
-    margin-top: 0%;
+#experienciaCarousel .carousel-control-next {
+    right: 0;
 }
 
-#experiencia h2{
-    margin-top: 0%;
+#experienciaCarousel .carousel-inner {
+    margin-top: 20px;
 }
 
-#experiencia > h2,#experiencia div, #experiencia > p , #experiencia > ul{
-    color: #f4f4f4;
+#experienciaCarousel .carousel-item {
+    transition: transform 0.6s ease-in-out;
 }
 
-#proyectos {
-    text-align: center;
-    padding: 3%;
-    background-color: #005e3e;
-}
-#proyectos h2{
-    margin-bottom: 0%;
-    margin-top: 0%;
+#experienciaCarousel .carousel-control-prev-icon,
+#experienciaCarousel .carousel-control-next-icon {
+    background-color:#005e3e;
+    border-radius: 50%;
+    padding: 10px;
 }
 
-#proyectos h2, #proyectos div div p, #proyectos div div h3{
-    color: #f4f4f4;
+#experienciaCarousel .carousel-item ul {
+    list-style: none; 
+    padding: 0;
+    margin: 0; 
+    border: none; 
 }
 
-#proyectos div div p{
-    text-align: justify;
+#experienciaCarousel .carousel-item ul li {
+    background: none;
+    border: none; 
+    padding: 10px 0; 
+    font-size: 1rem; 
 }
 
-.proyectos-carousel {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    width: 80%; 
-    margin: 0 auto; 
+/* Ajustes de carrusel para moviles*/
+@media (max-width: 768px) {
+    
+    #experienciaCarousel .carousel-control-prev,
+    #experienciaCarousel .carousel-control-next {
+        opacity: 0.5;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 10%;
+        z-index: 1000;
+    }
+
+    #experienciaCarousel .carousel-control-prev {
+        left: 10px;
+    }
+
+    #experienciaCarousel .carousel-control-next {
+        right: 10px;
+    }
+
+    #experienciaCarousel .carousel-control-prev-icon,
+    #experienciaCarousel .carousel-control-next-icon {
+        background-color: rgba(255, 255, 255, 0.8);
+        border-radius: 50%;
+        padding: 10px;
+    }
+
+    #experienciaCarousel .carousel-control-prev:hover,
+    #experienciaCarousel .carousel-control-next:hover {
+        opacity: 1;
+    }
 }
 
-.proyecto-item {
-    display: none;
-    flex: 1;
-    transition: opacity 0.5s ease-in-out;
-    padding: 20px;
-    max-width: 400px;
-    max-width: 600px; 
-    width: 100%; 
-}
-
-.proyecto-item h3{
-    font-size: 2em;
-    margin: 0%;
-    padding: 0%;
-}
-
-.proyecto-item img {
-    width: 100%;
+/* Canvas */
+#competenciasChart {
+    max-width: 100%;
     height: auto;
-    border-radius: 8px;
-    margin-bottom: 10px;
-    width: 100%; 
+    margin: 0 auto;
 }
 
+/* botones de #proyecto */
 .github-button {
-    display: inline-block;
-    padding: 10px 20px;
-    font-size: 16px;
+    margin-top: 10px;
     color: #00ab61;
     background-color: white;
     border: 2px solid #00ab61;
-    border-radius: 8px; 
-    text-decoration: none; 
+    border-radius: 8px;
+    text-decoration: none;
     transition: all 0.3s ease;
+    padding: 10px 20px;
 }
 
 .github-button:hover {
@@ -261,41 +194,53 @@ div ul{
     border-color: #008e4f;
 }
 
-.proyecto-item.active {
-    display: block;
-}
-
-.carousel-button {
-    background-color: transparent;
-    border: none;
-    color: #333;
-    font-size: 2em;
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 2;
-}
-
-.carousel-button.prev {
-    left: 10px;
-}
-
-.carousel-button.next {
-    right: 10px;
-}
-
-.carousel-button {
-    color: #f4f4f4;
-}
-
-
+/* Footer */
 footer {
     background-color: #00ab61;
     color: white;
-    padding: 10px;
+    padding: 20px;
     text-align: center;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+    margin-top: 30px;
+}
+
+/* ajustes de responsive */
+@media (max-width: 768px) {
+    header .nav-link {
+        font-size: 1rem;
+    }
+
+    .logo img {
+        height: 120px;
+    }
+
+    h1, h2 {
+        font-size: 2rem;
+    }
+
+    #sobre-mi p, #contacto p, #formacion ul, #proyectos p {
+        font-size: 0.9rem;
+    }
+
+    .carousel-item ul li {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 576px) {
+    header .nav-link {
+        font-size: 0.9rem;
+    }
+
+    h1, h2 {
+        font-size: 1.8rem;
+    }
+
+    #sobre-mi, #contacto, #formacion, #experiencia, #proyectos {
+        padding: 15px;
+    }
+
+    .github-button {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+    }
 }
