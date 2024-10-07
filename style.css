@@ -1,4 +1,3 @@
-
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
@@ -29,7 +28,7 @@ header .nav-link:hover {
 
 /* Main ajustado a moviles y tablets */
 main {
-    padding-top: 0%; 
+    padding-top: 0%;
 }
 
 @media (max-width: 768px) {
@@ -44,6 +43,75 @@ main {
     }
 }
 
+/*BOTON de descarga de CV*/
+.download-cv-btn {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.download-cv-btn a {
+    font-size: 1rem;
+    color: #fff;
+    background-color:#00ab61;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+.download-cv-btn a:hover {
+    background-color:#005e3e;
+    color: #f4f4f4;
+}
+
+@media (max-width: 768px) {
+    .download-cv-btn {
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    .download-cv-btn a {
+        font-size: 0.7rem;
+        color: #fff;
+        background-color:#00ab61;
+        border: none;
+        padding: 5px 10px;
+        border-radius: 5px;
+        text-decoration: none;
+        transition: background-color 0.3s;
+    }
+    .download-cv-btn a:hover {
+        background-color:#005e3e;
+        color: #f4f4f4;
+    }
+}
+
+@media (max-width: 1300px) {
+    .download-cv-btn {
+        position: absolute;
+        right: 0%;
+        top: 150%;
+        transform: translateY(-50%);
+    }
+    .download-cv-btn a {
+        font-size: 0.9rem;
+        color: #fff;
+        width: 80%;
+        background-color:#00ab61;
+        border: none;
+        padding: 10px 10px;
+        border-radius: 5px;
+        text-decoration: none;
+        transition: background-color 0.3s;
+    }
+    .download-cv-btn a:hover {
+        background-color:#005e3e;
+        color: #f4f4f4;
+    }
+}
+
 /* Logo */
 .logo img {
     height: 150px;
@@ -54,13 +122,16 @@ main {
 }
 
 /* ajustes de secciones*/
-h1, h2 {
+h1,
+h2 {
     color: #005e3e;
     margin-bottom: 20px;
 }
 
 @media (min-width: 769px) {
-    h1, h2 {
+
+    h1,
+    h2 {
         text-align: center;
     }
 
@@ -79,12 +150,15 @@ h1, h2 {
     }
 }
 
-#sobre-mi p, #contacto p, #formacion ul, #proyectos p {
+#sobre-mi p,
+#contacto p,
+#formacion ul,
+#proyectos p {
     text-align: justify;
     font-size: 1rem;
 }
 
-#contacto div p{
+#contacto div p {
     text-align: center;
 }
 
@@ -116,28 +190,28 @@ h1, h2 {
 
 #experienciaCarousel .carousel-control-prev-icon,
 #experienciaCarousel .carousel-control-next-icon {
-    background-color:#005e3e;
+    background-color: #005e3e;
     border-radius: 50%;
     padding: 10px;
 }
 
 #experienciaCarousel .carousel-item ul {
-    list-style: none; 
+    list-style: none;
     padding: 0;
-    margin: 0; 
-    border: none; 
+    margin: 0;
+    border: none;
 }
 
 #experienciaCarousel .carousel-item ul li {
     background: none;
-    border: none; 
-    padding: 10px 0; 
-    font-size: 1rem; 
+    border: none;
+    padding: 10px 0;
+    font-size: 1rem;
 }
 
 /* Ajustes de carrusel para moviles*/
 @media (max-width: 768px) {
-    
+
     #experienciaCarousel .carousel-control-prev,
     #experienciaCarousel .carousel-control-next {
         opacity: 0.5;
@@ -213,11 +287,15 @@ footer {
         height: 120px;
     }
 
-    h1, h2 {
+    h1,
+    h2 {
         font-size: 2rem;
     }
 
-    #sobre-mi p, #contacto p, #formacion ul, #proyectos p {
+    #sobre-mi p,
+    #contacto p,
+    #formacion ul,
+    #proyectos p {
         font-size: 0.9rem;
     }
 
@@ -231,11 +309,16 @@ footer {
         font-size: 0.9rem;
     }
 
-    h1, h2 {
+    h1,
+    h2 {
         font-size: 1.8rem;
     }
 
-    #sobre-mi, #contacto, #formacion, #experiencia, #proyectos {
+    #sobre-mi,
+    #contacto,
+    #formacion,
+    #experiencia,
+    #proyectos {
         padding: 15px;
     }
 
